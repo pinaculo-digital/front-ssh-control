@@ -1,0 +1,347 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+:root {
+    /* Cores principais */
+    --color-primary-base: #6366f1;        /* Indigo-500 */
+    --state-information-dark: #4f46e5;    /* Indigo-600 */
+  
+    /* Fundo do track */
+    --color-soft-200: #e5e7eb;            /* gray-200 */
+    --bg-sub-300: #d1d5db;                /* gray-300 */
+  }
+  
+  /* Dark mode */
+  .dark {
+    --color-primary-base: #818cf8;        /* Indigo-400 */
+    --state-information-dark: #6366f1;    /* Indigo-500 */
+    --color-soft-200: #374151;            /* gray-700 */
+    --bg-sub-300: #4b5563;                /* gray-600 */
+}
+
+*::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: var(--color-soft-200);
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: var(--bg-sub-300);
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: var(--bg-sub-300);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--color-primary-base);
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--state-information-dark);
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: var(--state-information-dark);
+  }
+
+/* Força quebra de palavras longas e respeita espaços */
+.markdown-content p,
+.markdown-content pre,
+.markdown-content code {
+  white-space: pre-wrap !important;     /* Preserva \n e quebra automática */
+  word-break: break-word !important;    /* Quebra palavras longas (URLs, hashes) */
+  overflow-wrap: break-word !important;
+  max-width: 600px !important
+}
+
+/* Estiliza <pre> e <code> para não quebrar o layout */
+.markdown-content pre {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;          /* Scroll horizontal se necessário */
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875em;
+  margin: 1rem 0;
+}
+
+.markdown-content code {
+  background-color: #f0f0f0;
+  padding: 0.2em 0.4em;
+  border-radius: 0.375rem;
+  font-family: inherit;
+  font-size: 0.9em;
+}
+
+/* Garante que pre > code também respeite */
+.markdown-content pre code {
+  all: unset;
+  display: block;
+  white-space: pre !important;   /* Dentro de <pre>, mantém formatação */
+  word-break: normal !important;
+  overflow-x: auto;
+}
+
+
+
+
+
+*::-webkit-scrollbar {
+  width: 4px
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-soft-200);
+  border-radius: 3px;
+  
+}
+
+
+
+@theme {
+    --text-11: 0.6875rem;
+    --text-12: 0.75rem;
+    --text-13: 0.8125rem;
+    --text-14: 0.875rem;
+    --text-15: 0.9375rem;
+    --text-16: 1rem;
+    --text-17: 1.065rem;
+    --text-18: 1.125rem;
+    --text-19: 1.1875rem;
+    --text-20: 1.25rem;
+    --text-21: 1.3125rem;
+    --text-22: 1.3175rem;
+    --text-23: 1.4375rem;
+    --text-24: 1.5rem;
+    --text-25: 1.5625rem;
+    --text-26: 1.625rem;
+    --text-27: 1.6875rem;
+    --text-28: 1.75rem;
+    --text-29: 1.8125rem;
+    --text-30: 1.875rem;
+    --text-31: 1.9375rem;
+    --text-32: 2rem;
+    --text-33: 2.0625rem;
+    --text-34: 2.125rem;
+    --text-35: 2.1875rem;
+    --text-36: 2.25rem;
+    --text-37: 2.3125rem;
+    --text-38: 2.375rem;
+    --text-39: 2.4375rem;
+    --text-40: 2.5rem;
+    --text-41: 2.5625rem;
+    --text-42: 2.625rem;
+    --text-43: 2.6875rem;
+    --text-44: 2.75rem;
+    --text-45: 2.8125rem;
+    --text-46: 2.875rem;
+    --text-47: 2.9375rem;
+    --text-48: 3rem;
+    --color-static-black: var(--static-static-black);
+    --color-static-white: var(--static-static-white);
+    --color-strong-950: var(--bg-strong-950);
+    --color-surface-800: var(--bg-surface-800);
+    --color-sub-300: var(--bg-sub-300);
+    --color-soft-200: var(--bg-soft-200);
+    --color-weak-50: var(--bg-weak-50);
+    --color-white-0: var(--bg-white-0);
+    --color-sub-600: var(--text-sub-600);
+    --color-soft-400: var(--text-soft-400);
+    --color-disabled-300: var(--text-disabled-300);
+    --color-strong-950: var(--stroke-strong-950);
+    --color-sub-300: var(--stroke-sub-300);
+    --color-soft-200: var(--stroke-soft-200);
+    --color-strong-950: var(--icon-strong-950);
+    --color-sub-600: var(--icon-sub-600);
+    --color-soft-400: var(--icon-soft-400);
+    --color-disabled-300: var(--icon-disabled-300);
+    --color-faded-dark: var(--state-faded-dark);
+    --color-faded-base: var(--state-faded-base);
+    --color-faded-light: var(--state-faded-light);
+    --color-faded-lighter: var(--state-faded-lighter);
+    --color-information-dark: var(--state-information-dark);
+    --color-information-base: var(--state-information-base);
+    --color-information-light: var(--state-information-light);
+    --color-information-lighter: var(--state-information-lighter);
+    --color-warning-dark: var(--state-warning-dark);
+    --color-warning-base: var(--state-warning-base);
+    --color-warning-light: var(--state-warning-light);
+    --color-warning-lighter: var(--state-warning-lighter);
+    --color-error-dark: var(--state-error-dark);
+    --color-error-base: var(--state-error-base);
+    --color-error-light: var(--state-error-light);
+    --color-error-lighter: var(--state-error-lighter);
+    --color-success-dark: var(--state-success-dark);
+    --color-success-base: var(--state-success-base);
+    --color-success-light: var(--state-success-light);
+    --color-success-lighter: var(--state-success-lighter);
+    --color-away-dark: var(--state-away-dark);
+    --color-away-base: var(--state-away-base);
+    --color-away-light: var(--state-away-light);
+    --color-away-lighter: var(--state-away-lighter);
+    --color-feature-dark: var(--state-feature-dark);
+    --color-feature-base: var(--state-feature-base);
+    --color-feature-light: var(--state-feature-light);
+    --color-feature-lighter: var(--state-feature-lighter);
+    --color-verified-dark: var(--state-verified-dark);
+    --color-verified-base: var(--state-verified-base);
+    --color-verified-light: var(--state-verified-light);
+    --color-verified-lighter: var(--state-verified-lighter);
+    --color-highlighted-dark: var(--state-highlighted-dark);
+    --color-highlighted-base: var(--state-highlighted-base);
+    --color-highlighted-light: var(--state-highlighted-light);
+    --color-highlighted-lighter: var(--state-highlighted-lighter);
+    --color-stable-dark: var(--state-stable-dark);
+    --color-stable-base: var(--state-stable-base);
+    --color-stable-light: var(--state-stable-light);
+    --color-stable-lighter: var(--state-stable-lighter);
+    --color-overlay-overlay: var(--overlay-overlay);
+    --color-social-apple: var(--social-apple);
+    --color-social-twitter: var(--social-twitter);
+    --color-social-github: var(--social-github);
+    --color-social-notion: var(--social-notion);
+    --color-social-tidal: var(--social-tidal);
+    --color-social-amazon: var(--social-amazon);
+    --color-social-zendesk: var(--social-zendesk);
+    --color-strong-400: var(--illustration-strong-400);
+    --color-sub-300: var(--illustration-sub-300);
+    --color-soft-200: var(--illustration-soft-200);
+    --color-weak-100: var(--illustration-weak-100);
+  
+    /*Tema principal do site aqui*/
+  
+    --color-primary-dark: var(--blue-800);
+    --color-primary-darker: var(--blue-700);
+    --color-primary-base: var(--blue-500);
+    --color-primary-lighter: var(--blue-400);
+    --color-primary-light: var(--blue-300);
+    --color-primary-alpha-24: var(--alpha-blue-alpha-24);
+    --color-primary-alpha-16: var(--alpha-blue-alpha-16);
+    --color-primary-alpha-10: var(--alpha-blue-alpha-10);
+    --color-primary-alpha-0: var(--alpha-blue-alpha-0);
+    
+    --color-red-900: rgba(139, 24, 34, 1);
+    --color-red-800: rgba(173, 31, 43, 1);
+    --color-red-700: rgba(208, 37, 51, 1);
+    --color-red-600: rgba(233, 53, 68, 1);
+    --color-red-500: rgba(251, 55, 72, 1);
+    --color-red-400: rgba(255, 104, 117, 1);
+    --color-red-300: rgba(255, 151, 160, 1);
+    --color-red-200: rgba(255, 192, 197, 1);
+    --color-red-100: rgba(255, 213, 216, 1);
+    --color-red-50: rgba(255, 235, 236, 1);
+    --color-green-950: rgba(11, 70, 39, 1);
+    --color-green-900: rgba(22, 100, 59, 1);
+    --color-green-800: rgba(26, 117, 68, 1);
+    --color-green-700: rgba(23, 140, 78, 1);
+    --color-green-600: rgba(29, 175, 97, 1);
+    --color-green-500: rgba(31, 193, 107, 1);
+    --color-green-400: rgba(62, 224, 137, 1);
+    --color-green-300: rgba(132, 235, 180, 1);
+    --color-green-200: rgba(194, 245, 218, 1);
+    --color-green-100: rgba(208, 251, 233, 1);
+    --color-green-50: rgba(224, 250, 236, 1);
+    --color-yellow-950: rgba(98, 76, 24, 1);
+    --color-yellow-900: rgba(134, 102, 29, 1);
+    --color-yellow-800: rgba(167, 128, 37, 1);
+    --color-yellow-700: rgba(201, 154, 44, 1);
+    --color-yellow-600: rgba(230, 168, 25, 1);
+    --color-yellow-500: rgba(246, 181, 30, 1);
+    --color-yellow-400: rgba(255, 210, 104, 1);
+    --color-yellow-300: rgba(255, 224, 151, 1);
+    --color-yellow-200: rgba(255, 236, 192, 1);
+    --color-yellow-100: rgba(255, 239, 204, 1);
+    --color-yellow-50: rgba(255, 250, 235, 1);
+    --color-purple-950: rgba(53, 26, 117, 1);
+    --color-purple-900: rgba(61, 29, 134, 1);
+    --color-purple-800: rgba(76, 37, 167, 1);
+    --color-purple-700: rgba(91, 44, 201, 1);
+    --color-purple-600: rgba(105, 62, 224, 1);
+    --color-purple-500: rgba(125, 82, 244, 1);
+    --color-purple-400: rgba(140, 113, 246, 1);
+    --color-purple-300: rgba(168, 151, 255, 1);
+    --color-purple-200: rgba(202, 192, 255, 1);
+    --color-purple-100: rgba(220, 213, 255, 1);
+    --color-purple-50: rgba(239, 235, 255, 1);
+    --color-sky-950: rgba(18, 75, 104, 1);
+    --color-sky-900: rgba(24, 101, 139, 1);
+    --color-sky-800: rgba(31, 126, 173, 1);
+    --color-sky-700: rgba(37, 151, 208, 1);
+    --color-sky-600: rgba(53, 173, 233, 1);
+    --color-sky-500: rgba(71, 194, 255, 1);
+    --color-sky-400: rgba(104, 205, 255, 1);
+    --color-sky-300: rgba(151, 220, 255, 1);
+    --color-sky-200: rgba(192, 234, 255, 1);
+    --color-sky-100: rgba(213, 241, 255, 1);
+    --color-sky-50: rgba(235, 248, 255, 1);
+    --color-pink-950: rgba(104, 18, 61, 1);
+    --color-pink-900: rgba(139, 24, 82, 1);
+    --color-pink-800: rgba(173, 31, 102, 1);
+    --color-pink-700: rgba(208, 37, 122, 1);
+    --color-pink-600: rgba(233, 53, 143, 1);
+    --color-pink-500: rgba(251, 75, 163, 1);
+    --color-pink-400: rgba(255, 104, 179, 1);
+    --color-pink-300: rgba(255, 151, 203, 1);
+    --color-pink-200: rgba(255, 192, 223, 1);
+    --color-pink-100: rgba(255, 213, 234, 1);
+    --color-pink-50: rgba(255, 235, 244, 1);
+    --color-teal-950: rgba(11, 70, 62, 1);
+    --color-teal-900: rgba(22, 100, 90, 1);
+    --color-teal-800: rgba(26, 117, 105, 1);
+    --color-teal-700: rgba(23, 140, 125, 1);
+    --color-teal-600: rgba(29, 175, 156, 1);
+    --color-teal-500: rgba(34, 211, 187, 1);
+    --color-teal-400: rgba(63, 222, 201, 1);
+    --color-teal-300: rgba(132, 235, 221, 1);
+    --color-teal-200: rgba(194, 245, 238, 1);
+    --color-teal-100: rgba(208, 251, 245, 1);
+    --color-teal-50: rgba(228, 251, 248, 1);
+    --color-alpha-neutral-alpha-24: rgba(153, 160, 174, 0.23999999463558197);
+    --color-alpha-neutral-alpha-16: rgba(153, 160, 174, 0.1599999964237213);
+    --color-alpha-neutral-alpha-10: rgba(153, 160, 174, 0.10000000149011612);
+    --color-alpha-blue-alpha-24: rgba(71, 108, 255, 0.23999999463558197);
+    --color-alpha-blue-alpha-16: rgba(71, 108, 255, 0.1599999964237213);
+    --color-alpha-blue-alpha-10: rgba(71, 108, 255, 0.10000000149011612);
+    --color-alpha-orange-alpha-24: rgba(255, 145, 71, 0.23999999463558197);
+    --color-alpha-orange-alpha-16: rgba(255, 145, 71, 0.1599999964237213);
+    --color-alpha-orange-alpha-10: rgba(255, 145, 71, 0.10000000149011612);
+    --color-alpha-red-alpha-24: rgba(251, 55, 72, 0.23999999463558197);
+    --color-alpha-red-alpha-16: rgba(251, 55, 72, 0.1599999964237213);
+    --color-alpha-red-alpha-10: rgba(251, 55, 72, 0.10000000149011612);
+    --color-alpha-green-alpha-24: rgba(31, 193, 107, 0.23999999463558197);
+    --color-alpha-green-alpha-16: rgba(31, 193, 107, 0.1599999964237213);
+    --color-alpha-green-alpha-10: rgba(31, 193, 107, 0.10000000149011612);
+    --color-alpha-yellow-alpha-24: rgba(251, 198, 75, 0.23999999463558197);
+    --color-alpha-yellow-alpha-16: rgba(251, 198, 75, 0.1599999964237213);
+    --color-alpha-yellow-alpha-10: rgba(251, 198, 75, 0.10000000149011612);
+    --color-alpha-purple-alpha-24: rgba(120, 77, 239, 0.23999999463558197);
+    --color-alpha-purple-alpha-16: rgba(120, 77, 239, 0.1599999964237213);
+    --color-alpha-purple-alpha-10: rgba(120, 77, 239, 0.10000000149011612);
+    --color-alpha-sky-alpha-24: rgba(71, 194, 255, 0.23999999463558197);
+    --color-alpha-sky-alpha-16: rgba(71, 194, 255, 0.1599999964237213);
+    --color-alpha-sky-alpha-10: rgba(71, 194, 255, 0.10000000149011612);
+    --color-alpha-pink-alpha-24: rgba(251, 75, 163, 0.23999999463558197);
+    --color-alpha-pink-alpha-16: rgba(251, 75, 163, 0.1599999964237213);
+    --color-alpha-pink-alpha-10: rgba(251, 75, 163, 0.10000000149011612);
+    --color-alpha-teal-alpha-24: rgba(34, 211, 187, 0.23999999463558197);
+    --color-alpha-teal-alpha-16: rgba(34, 211, 187, 0.1599999964237213);
+    --color-alpha-teal-alpha-10: rgba(34, 211, 187, 0.10000000149011612);
+    --color-alpha-white-alpha-24: rgba(255, 255, 255, 0.23999999463558197);
+    --color-alpha-white-alpha-16: rgba(255, 255, 255, 0.1599999964237213);
+    --color-alpha-white-alpha-10: rgba(255, 255, 255, 0.10000000149011612);
+    --color-alpha-black-alpha-24: rgba(14, 18, 27, 0.23999999463558197);
+    --color-alpha-black-alpha-16: rgba(14, 18, 27, 0.1599999964237213);
+    --color-alpha-black-alpha-10: rgba(14, 18, 27, 0.10000000149011612);
+  }
