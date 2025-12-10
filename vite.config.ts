@@ -3,7 +3,7 @@ import { sveltekit } from "@sveltejs/kit/vite";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/front-ssh/",
+  base: "/front-ssh",
   plugins: [tailwindcss(), sveltekit()],
   preview: {
     allowedHosts: true,

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { assets } from "$lib/global/global.svelte";
   import "../app.css";
   import Advice from "../components/elements/pop/Advice.svelte";
   let { children } = $props();
@@ -7,8 +8,8 @@
 <svelte:head>
   <title>UFCHAT</title>
 
-  <link rel="stylesheet" href="/themes/root.css" />
-  <link rel="stylesheet" href="/themes/dark.css" />
+  <link rel="stylesheet" href={assets("/themes/root.css")} />
+  <link rel="stylesheet" href={assets("/themes/dark.css")} />
 </svelte:head>
 
 <div
